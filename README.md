@@ -11,6 +11,8 @@
 
 Monitor de sistema e gestor de tarefas para Linux, inspirado no Gestor de Tarefas do Windows 10. Mostra processos, desempenho (CPU, memória, discos, rede e GPU), histórico de aplicações, arranque, utilizadores e serviços, e inclui separadores com o resultado visual do **Fastfetch** e o **Htop** interativo.
 
+</div>
+
 ![Desempenho](screenshots/desempenho.png)
 
 ## Funcionalidades
