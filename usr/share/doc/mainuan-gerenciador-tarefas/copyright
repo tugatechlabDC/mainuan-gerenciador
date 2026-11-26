@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: mainuan-gerenciador-tarefas
+Upstream-Contact: David Caixinha
+
+Files: *
+Copyright: 2026 David Caixinha
+License: GPL-3+
+ Este programa é software livre: pode redistribuí-lo e/ou modificá-lo nos termos
+ da Licença Pública Geral GNU, versão 3 ou posterior. Na distribuição Debian, o
+ texto completo está em /usr/share/common-licenses/GPL-3.

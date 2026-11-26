@@ -1,0 +1,14 @@
+Package: mainuan-gerenciador-tarefas
+Version: 1.0.3
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.10), python3-pyside6.qtcore | python3-pyqt5, python3-pyside6.qtgui | python3-pyqt5, python3-pyside6.qtwidgets | python3-pyqt5, python3-psutil, pkexec | policykit-1, htop, util-linux, procps
+Recommends: fastfetch, systemd, fonts-dejavu-core
+Maintainer: David Caixinha <noreply@mainuan.local>
+Description: Mainuan Gerenciador Tarefas - monitor de sistema e tarefas
+ Clone do Gerenciador de Tarefas do Windows 10 para Linux: processos,
+ desempenho (CPU, memória, discos, rede e GPU), histórico de aplicações,
+ arranque, utilizadores e serviços. Inclui separadores com o resultado
+ visual do Fastfetch e o Htop interativo.
+ Instala automaticamente o htop e o fastfetch se faltarem.

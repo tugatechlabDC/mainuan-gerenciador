@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+Name=Mainuan Gerenciador Tarefas
+GenericName=Gerenciador de tarefas
+GenericName[en]=Task manager
+GenericName[es]=Administrador de tareas
+GenericName[fr]=Gestionnaire de tâches
+GenericName[pt_BR]=Gerenciador de tarefas
+Comment=Monitor de sistema e tarefas: processos, desempenho, serviços, Fastfetch e Htop
+Comment[en]=System and task monitor: processes, performance, services, Fastfetch and Htop
+Comment[es]=Monitor de sistema y tareas: procesos, rendimiento, servicios, Fastfetch y Htop
+Comment[fr]=Moniteur système et de tâches : processus, performances, services, Fastfetch et Htop
+Comment[pt_BR]=Monitor de sistema e tarefas: processos, desempenho, serviços, Fastfetch e Htop
+Exec=mainuan-gerenciador-tarefas
+Icon=mainuan-gerenciador-tarefas
+Terminal=false
+Categories=System;Monitor;
+Keywords=tarefas;task manager;processos;processes;cpu;memória;desempenho;htop;fastfetch;serviços;
+StartupWMClass=mainuan-gerenciador-tarefas

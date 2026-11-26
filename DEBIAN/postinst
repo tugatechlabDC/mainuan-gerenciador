@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+if [ "$1" = "configure" ]; then
+    command -v gtk-update-icon-cache >/dev/null 2>&1 && gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor 2>/dev/null || true
+    command -v update-desktop-database >/dev/null 2>&1 && update-desktop-database -q /usr/share/applications 2>/dev/null || true
+    python3 -m compileall -q /usr/lib/mainuan-gerenciador-tarefas >/dev/null 2>&1 || true
+
+    # Instala em segundo plano (depois de o dpkg terminar) o que faltar: htop e fastfetch
+    TOOLS=/usr/lib/mainuan-gerenciador-tarefas/install-tools.sh
+    need=0
+    for t in htop fastfetch; do
+        command -v "$t" >/dev/null 2>&1 || need=1
+    done
+    if [ "$need" = "1" ] && [ -x "$TOOLS" ] && [ -z "$MAINUAN_SKIP_TOOLS" ]; then
+        LOG=/var/log/mainuan-gerenciador-tarefas-install.log
+        if [ -d /run/systemd/system ] && command -v systemd-run >/dev/null 2>&1; then
+            systemd-run --no-block --quiet --unit="mainuan-gerenciador-tarefas-tools-$$" \
+                --property=StandardOutput=append:"$LOG" --property=StandardError=append:"$LOG" \
+                "$TOOLS" >/dev/null 2>&1 || true
+        else
+            setsid "$TOOLS" >>"$LOG" 2>&1 </dev/null 3>&- 4>&- 5>&- 6>&- 7>&- 8>&- 9>&- &
+        fi
+    fi
+fi
+exit 0

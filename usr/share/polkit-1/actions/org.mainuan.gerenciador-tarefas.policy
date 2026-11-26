@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+  <vendor>Mainuan</vendor>
+  <vendor_url>https://mainuan.local</vendor_url>
+  <action id="org.mainuan.gerenciador-tarefas.helper">
+    <description>Gerir processos, serviços e programas do sistema</description>
+    <description xml:lang="en">Manage processes, services and system programs</description>
+    <description xml:lang="es">Gestionar procesos, servicios y programas del sistema</description>
+    <description xml:lang="fr">Gérer les processus, services et programmes du système</description>
+    <description xml:lang="pt_BR">Gerenciar processos, serviços e programas do sistema</description>
+    <message>É necessária autenticação para o Mainuan Gerenciador Tarefas executar esta ação</message>
+    <message xml:lang="en">Authentication is required for Mainuan Gerenciador Tarefas to perform this action</message>
+    <message xml:lang="es">Se requiere autenticación para que Mainuan Gerenciador Tarefas realice esta acción</message>
+    <message xml:lang="fr">Une authentification est requise pour que Mainuan Gerenciador Tarefas effectue cette action</message>
+    <message xml:lang="pt_BR">É necessária autenticação para o Mainuan Gerenciador Tarefas executar esta ação</message>
+    <icon_name>mainuan-gerenciador-tarefas</icon_name>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/mainuan-gerenciador-tarefas/helper.py</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+  </action>
+</policyconfig>
