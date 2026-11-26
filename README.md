@@ -1,6 +1,6 @@
 <div align="center">
 
-![Mainuan Gerenciador Tarefas](usr/share/mainuan-gerenciador-tarefas.png)
+![Mainuan Gerenciador Tarefas](usr/share/icons/hicolor/256x256/apps/mainuan-gerenciador-tarefas.png)
 
 # Mainuan Gerenciador Tarefas
 
